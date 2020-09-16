@@ -5,11 +5,17 @@
 
 A fork of [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
 
-Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard with an extra step to insert Jira ID. Jira ID is auto-detected from your branch name by default.
-
-Jira ID in the format of /^[A-Z]+-[0-9]+\$/ will be automatically detected from the current branch name and be displayed as default at the prompt step. The step is optional so you can skip it if you do not have a Jira ID.
+Prompts for conventional changelog standard with an extra step to insert Jira ID. Jira ID is auto-detected from your branch name by default.
 
 ![Demo](media/demo.gif)
+
+Jira ID in the format of `/^[A-Z]+-[0-9]+\$/`, "ADR-123" for example, will be automatically detected from the current branch name and be displayed as default at the prompt step. The step is optional so you can skip it if you do not have a Jira ID.
+
+## Features
+
+- It works with (semantic-release)[https://semantic-release.gitbook.io/semantic-release/] and [Standard Version](https://github.com/conventional-changelog/standard-version) right out of the box.
+- It share the same configurtion with (commitlint)[https://github.com/conventional-changelog/commitlint]'s default configuration.
+
 
 ## Configuration
 
