@@ -3,6 +3,7 @@ var chalk = require('chalk');
 var engine = require('./engine');
 var mock = require('mock-require');
 var semver = require('semver');
+var branch = require('git-branch');
 
 var types = require('conventional-commit-types').types;
 
@@ -46,8 +47,19 @@ var longIssuesSplit =
     .trim() +
   '\n' +
   longIssues.slice(defaultOptions.maxLineWidth * 2, longIssues.length).trim();
+var jira = 'AAA-11223';
 
 describe('commit message', function() {
+  it('should append jira id on top of commmit body', () => {
+    expect(
+      commitMessage({
+        type,
+        subject,
+        jira,
+        body
+      })
+    ).to.equal(`${type}: ${subject}\n\n${jira}\n\n${body}`);
+  });
   it('only header w/ out scope', function() {
     expect(
       commitMessage({
@@ -282,6 +294,12 @@ describe('validation', function() {
 });
 
 describe('defaults', function() {
+  it('Jira id default', () => {
+    const branchName = branch.sync() || '';
+    const jiraIdMatch = branchName.match(/[A-Z]+-[0-9]+/) || [];
+    const jiraId = jiraIdMatch.shift(); // stirng or undefined ;
+    expect(questionDefault('jira')).to.equal(jiraId);
+  });
   it('defaultType default', function() {
     expect(questionDefault('type')).to.be.undefined;
   });
@@ -373,6 +391,9 @@ describe('transformation', function() {
 });
 
 describe('filter', function() {
+  it('uppercase jira', () => {
+    expect(questionFilter('jira', 'web-12345')).to.equal('WEB-12345');
+  });
   it('lowercase scope', () =>
     expect(questionFilter('scope', 'HelloMatt')).to.equal('hellomatt'));
   it('lowerfirst subject trimmed and trailing dots striped', () =>

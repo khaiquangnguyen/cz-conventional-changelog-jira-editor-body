@@ -4,6 +4,7 @@ var wrap = require('word-wrap');
 var map = require('lodash.map');
 var longest = require('longest');
 var chalk = require('chalk');
+var branch = require('git-branch');
 
 var filter = function(array) {
   return array.filter(function(x) {
@@ -23,7 +24,10 @@ var maxSummaryLength = function(options, answers) {
 
 var filterSubject = function(subject, disableSubjectLowerCase) {
   subject = subject.trim();
-  if (!disableSubjectLowerCase && subject.charAt(0).toLowerCase() !== subject.charAt(0)) {
+  if (
+    !disableSubjectLowerCase &&
+    subject.charAt(0).toLowerCase() !== subject.charAt(0)
+  ) {
     subject =
       subject.charAt(0).toLowerCase() + subject.slice(1, subject.length);
   }
@@ -46,6 +50,11 @@ module.exports = function(options) {
       value: key
     };
   });
+
+  // detect jira id in branch name
+  var branchName = branch.sync() || '';
+  var jiraIdFound = branchName.match(/[A-Z]+-[0-9]+/) || [];
+  var defaultJiraId = jiraIdFound.shift();
 
   return {
     // When a user runs `git cz`, prompter will
@@ -77,6 +86,22 @@ module.exports = function(options) {
         },
         {
           type: 'input',
+          name: 'jira',
+          message:
+            "JIRA ID (e.g. WEB-12345): (press enter to skip if you don't have one)",
+          default: defaultJiraId,
+          validate: function(jira) {
+            if (!jira) {
+              return true;
+            }
+            return /^[A-Z]+-[0-9]+$/.test(jira);
+          },
+          filter: function(jira) {
+            return jira ? jira.toUpperCase() : '';
+          }
+        },
+        {
+          type: 'input',
           name: 'scope',
           message:
             'What is the scope of this change (e.g. component or file name): (press enter to skip)',
@@ -99,7 +124,10 @@ module.exports = function(options) {
           },
           default: options.defaultSubject,
           validate: function(subject, answers) {
-            var filteredSubject = filterSubject(subject, options.disableSubjectLowerCase);
+            var filteredSubject = filterSubject(
+              subject,
+              options.disableSubjectLowerCase
+            );
             return filteredSubject.length == 0
               ? 'subject is required'
               : filteredSubject.length <= maxSummaryLength(options, answers)
@@ -111,7 +139,10 @@ module.exports = function(options) {
                 ' characters.';
           },
           transformer: function(subject, answers) {
-            var filteredSubject = filterSubject(subject, options.disableSubjectLowerCase);
+            var filteredSubject = filterSubject(
+              subject,
+              options.disableSubjectLowerCase
+            );
             var color =
               filteredSubject.length <= maxSummaryLength(options, answers)
                 ? chalk.green
@@ -202,6 +233,9 @@ module.exports = function(options) {
         // Hard limit this line in the validate
         var head = answers.type + scope + ': ' + answers.subject;
 
+        // jira id will be injected into body
+        var jiraid = answers.jira ? wrap(answers.jira, wrapOptions) : false;
+
         // Wrap these lines at options.maxLineWidth characters
         var body = answers.body ? wrap(answers.body, wrapOptions) : false;
 
@@ -214,7 +248,7 @@ module.exports = function(options) {
 
         var issues = answers.issues ? wrap(answers.issues, wrapOptions) : false;
 
-        commit(filter([head, body, breaking, issues]).join('\n\n'));
+        commit(filter([head, jiraid, body, breaking, issues]).join('\n\n'));
       });
     }
   };
