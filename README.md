@@ -9,7 +9,7 @@ Prompts for [conventional changelog](https://github.com/conventional-changelog/c
 
 Jira ID in the format of /^[A-Z]+-[0-9]+\$/ will be automatically detected from the current branch name and be displayed as default at the prompt step. The step is optional so you can skip it if you do not have a Jira ID.
 
-- ![Demo](media/demo.gif)
+![Demo](media/demo.gif)
 
 ## Configuration
 
