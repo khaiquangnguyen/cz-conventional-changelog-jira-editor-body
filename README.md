@@ -1,8 +1,8 @@
 # cz-conventional-changelog-with-jiraid-detection
 
 Status:
-[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
-[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-with-jiraid-detection&from=2020-09-16)
+[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-with-jiraid-detection.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
+[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-with-jiraid-detection.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-with-jiraid-detection&from=2020-09-16)
 
 A fork of [cz-conventional-changelog-with-jiraid](https://github.com/commitizen/cz-conventional-changelog). Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard with an extra step to insert Jira ID. Jira ID is auto-detected from your branch name by default.
 
