@@ -1,7 +1,7 @@
 # cz-conventional-changelog-with-jiraid-detection
 
 [![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-with-jiraid-detection.svg?style=flat)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
-[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-with-jiraid-detection.svg?style=flat)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-with-jiraid-detection&from=2020-09-16)
+![ci](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/workflows/ci/badge.svg)
 
 A fork of [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
 
