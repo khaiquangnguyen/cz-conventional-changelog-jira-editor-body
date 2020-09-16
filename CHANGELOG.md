@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/compare/v1.0.0...v1.0.1) (2020-09-16)
+
+
+### Bug Fixes
+
+* **readme:** fix typo ([f86e791](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/commit/f86e791d9ee8177a1f00272f583b18ffb8d18be1))
+
 # 1.0.0 (2020-09-16)
 
 ### Bug Fixes
