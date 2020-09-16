@@ -1,6 +1,5 @@
 # cz-conventional-changelog-with-jiraid-detection
 
-Status:
 [![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-with-jiraid-detection.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
 [![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-with-jiraid-detection.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-with-jiraid-detection&from=2020-09-16)
 
