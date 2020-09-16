@@ -1,7 +1,7 @@
 {
   "name": "cz-conventional-changelog",
   "version": "0.0.0-semantically-released.0",
-  "description": "Commitizen adapter following the conventional-changelog format.",
+  "description": "Prompts for conventional changelog standard with an extra step to insert Jira ID.",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
@@ -9,16 +9,16 @@
     "format": "prettier --write *.js",
     "semantic-release": "semantic-release"
   },
-  "homepage": "https://github.com/commitizen/cz-conventional-changelog",
+  "homepage": "https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection",
   "repository": {
     "type": "git",
-    "url": "https://github.com/commitizen/cz-conventional-changelog.git"
+    "url": "https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection.git"
   },
   "engineStrict": true,
   "engines": {
     "node": ">= 10"
   },
-  "author": "Jim Cummins <jimthedev@gmail.com>",
+  "author": "Daw-Chih Liou <dawochih.liou@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
