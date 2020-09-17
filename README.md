@@ -13,8 +13,11 @@ Jira ID in the format of `/^[A-Z]+-[0-9]+\$/`, "ADR-123" for example, will be au
 
 ## Features
 
-- It works with [semantic-release](https://semantic-release.gitbook.io/semantic-release/) and [Standard Version](https://github.com/conventional-changelog/standard-version) right out of the box.
-- It share the same configurtion with [commitlint](https://github.com/conventional-changelog/commitlint)'s default configuration.
+- 🔥 It works with [semantic-release](https://semantic-release.gitbook.io/semantic-release/) and [Standard Version](https://github.com/conventional-changelog/standard-version) right out of the box.
+- 💚 It share the same configurtion with [commitlint](https://github.com/conventional-changelog/commitlint)'s default configuration.
+- 💆‍♀️ It prompts an optional step for inserting your Jira ID.
+- 🤖 It automatically detects Jira ID from your current branch name and display it as default value at the prompt step.
+- 📝 Jira ID is composed into the top of your commit message body.
 
 
 ## Configuration
