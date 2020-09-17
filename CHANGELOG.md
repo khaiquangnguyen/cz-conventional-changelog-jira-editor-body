@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/compare/v1.0.1...v1.0.2) (2020-09-17)
+
+
+### Bug Fixes
+
+* **readme.md:** add important use case information ([71fe179](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/commit/71fe1794e20cc024c6090557068cbf8e7d7373be))
+
 ## [1.0.1](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/compare/v1.0.0...v1.0.1) (2020-09-16)
 
 
