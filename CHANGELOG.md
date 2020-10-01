@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/compare/v1.0.2...v1.0.3) (2020-10-01)
+
+
+### Bug Fixes
+
+* **package.json:** add missing file ([48431b9](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/commit/48431b97c503186d9e3c5f1695a85f7f4ad7f8a1))
+
 ## [1.0.2](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/compare/v1.0.1...v1.0.2) (2020-09-17)
 
 
