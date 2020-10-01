@@ -21,6 +21,15 @@ or with yarn
 
 ```yarn add --dev cz-conventional-changelog-with-jiraid-detection```
 
+To enable it, please update your `package.config` as the following
+
+```json5
+"config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-with-jiraid-detection"
+    }
+  },
+```
 
 ## Features
 
