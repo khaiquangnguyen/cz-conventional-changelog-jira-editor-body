@@ -18,7 +18,8 @@
     "node": ">= 10"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "engine.js"
   ],
   "author": "Daw-Chih Liou <dawochih.liou@gmail.com>",
   "license": "MIT",
