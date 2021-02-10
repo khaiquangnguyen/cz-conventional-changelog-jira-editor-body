@@ -94,7 +94,7 @@ module.exports = function(options) {
             if (!jira) {
               return true;
             }
-            return /^[A-Z]+-[0-9]+$/.test(jira);
+            return /^[A-Z0-9]+-[0-9]+$/.test(jira);
           },
           filter: function(jira) {
             return jira ? jira.toUpperCase() : '';
