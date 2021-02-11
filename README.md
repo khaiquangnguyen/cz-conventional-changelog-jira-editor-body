@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-with-jiraid-detection.svg?style=flat)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
 ![ci](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/workflows/ci/badge.svg)
+![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-with-jiraid-detection)
 
 A fork of [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
 
