@@ -10,7 +10,7 @@ Prompts for conventional changelog standard with an extra step to insert Jira ID
 
 ![Demo](media/demo.gif)
 
-Jira ID in the format of `/^[A-Z]+-[0-9]+\$/`, "ADR-123" for example, will be automatically detected from the current branch name and be displayed as default at the prompt step. The step is optional so you can skip it if you do not have a Jira ID.
+Jira ID in the format of `/^[A-Z0-9]+-[0-9]+\$/`, "ADR-123" for example, will be automatically detected from the current branch name and be displayed as default at the prompt step. The step is optional so you can skip it if you do not have a Jira ID.
 
 ## Install
 
