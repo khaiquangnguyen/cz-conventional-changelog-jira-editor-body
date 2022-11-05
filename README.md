@@ -1,12 +1,7 @@
-# cz-conventional-changelog-with-jiraid-detection
 
-[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-with-jiraid-detection.svg?style=flat)](https://www.npmjs.org/package/cz-conventional-changelog-with-jiraid-detection)
-![ci](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection/workflows/ci/badge.svg)
-![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-with-jiraid-detection)
+A fork of [cz-conventional-changelog-with-jira](https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection).
 
-A fork of [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
-
-Prompts for conventional changelog standard with an extra step to insert Jira ID. Jira ID is auto-detected from your branch name by default.
+Prompts for conventional changelog standard with an extra step to insert Jira ID. Jira ID is auto-detected from your branch name by default. Make body required and support editor type
 
 ![Demo](media/demo.gif)
 
@@ -16,18 +11,15 @@ Jira ID in the format of `/^[A-Z0-9]+-[0-9]+\$/`, "ADR-123" for example, will be
 
 with npm
 
-```npm install --save-dev cz-conventional-changelog-with-jiraid-detection```
-
-or with yarn
-
-```yarn add --dev cz-conventional-changelog-with-jiraid-detection```
+```npm install --save-dev khaiquangnguyen/cz-conventional-changelog-jira-editor-body
+```
 
 To enable it, please update your `package.config` as the following
 
 ```json5
 "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog-with-jiraid-detection"
+      "path": "./node_modules/cz-conventional-changelog-jira-editor-body"
     }
   },
 ```

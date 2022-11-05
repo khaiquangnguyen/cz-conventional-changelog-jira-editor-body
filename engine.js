@@ -154,10 +154,10 @@ module.exports = function(options) {
           }
         },
         {
-          type: 'input',
+          type: 'editor',
           name: 'body',
           message:
-            'Provide a longer description of the change: (press enter to skip)\n',
+            'Provide a longer description of the change \n',
           default: options.defaultBody
         },
         {

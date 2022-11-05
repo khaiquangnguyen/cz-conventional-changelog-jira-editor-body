@@ -1,17 +1,17 @@
 {
-  "name": "cz-conventional-changelog-with-jiraid-detection",
+  "name": "cz-conventional-changelog-jira-editor-body",
   "version": "1.0.3",
-  "description": "Prompts for conventional changelog standard with an extra step to insert Jira ID.",
+  "description": "Prompts for conventional changelog standard with an extra step to insert Jira ID and editor body",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
     "test": "mocha *.test.js",
     "format": "prettier --write *.js"
   },
-  "homepage": "https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection",
+  "homepage": "https://github.com/khaiquangnguyen/cz-conventional-changelog-jira-editor-body",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DawChihLiou/cz-conventional-changelog-with-jiraid-detection.git"
+    "url": "https://github.com/khaiquangnguyen/cz-conventional-changelog-jira-editor-body"
   },
   "engineStrict": true,
   "engines": {
@@ -21,7 +21,7 @@
     "index.js",
     "engine.js"
   ],
-  "author": "Daw-Chih Liou <dawochih.liou@gmail.com>",
+  "author": "Khai Quang Nguyen <quangkhai279@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
